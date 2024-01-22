@@ -16,8 +16,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 
     //Slider routes
-    Route::get('home/slider', [SliderController::class, 'Slider'])->name('home.slider');
-    Route::get('add/slider', [SliderController::class, 'AddSlider'])->name('add.slider');
-    Route::post('store/slider', [SliderController::class, 'StoreSlider'])->name('store.slider');
+    Route::get('slider/home', [SliderController::class, 'Slider'])->name('home.slider');
+    Route::get('slider/add', [SliderController::class, 'AddSlider'])->name('add.slider');
+    Route::post('slider/store', [SliderController::class, 'StoreSlider'])->name('store.slider');
+    Route::get('slider/edit/{id}', [SliderController::class, 'EditSlider']);
+    Route::post('slider/update/{id}', [SliderController::class, 'UpdateSlider']);
+    Route::get('slider/delete/{id}', [SliderController::class, 'DeleteSlider']);
+
 });
 
