@@ -8,8 +8,8 @@
     <div class= "container">
         <div class="row">
 
-        <h4 class="m-3">Home Slider</h4>
-        <a href="{{ route('add.slider') }}"><button class= 'btn btn-info m-3'>Add Slider</button></a>
+        <h4 class="m-3">Testimonials</h4>
+        <a href="{{ route('add.testimonial') }}"><button class= 'btn btn-info m-3'>Add Testimonial</button></a>
 
             <div class="col-md-12">
                 <div class="card">
@@ -21,15 +21,17 @@
                     </div>
                     @endif
 
-                    <div class="card-header"> All Slider </div>
+                    <div class="card-header"> All Testimonials </div>
 
             <table class="table">
                 <thead>
                     <tr>
                         
-                    <th scope="col" width="5%">SL No</th>
-                    <th scope="col" width="15%"> Title</th>
-                    <th scope="col" width="15%"> Image </th>
+                    <th scope="col" width="10%">SL No</th>
+                    <th scope="col" width="10%"> Image </th>
+                    <th scope="col" width="15%"> Name</th>
+                    <th scope="col" width="15%"> Role</th>
+                    <th scope="col" width="35%"> Details</th>
                     <th scope="col" width="15%">Action</th>
                     
                     </tr>
@@ -37,13 +39,15 @@
                 <tbody>
                 
                     @php($i=1) 
-                    @foreach($sliders as $slider)
+                    @foreach($testimonials as $testimonial)
                     <tr>       
                     <th scope="row">{{ $i++ }}</th>
-                    <td> {{ $slider->title }} </td>
-                    <td> <img src="{{ asset($slider->image) }}" style="height:40px; width:70px;" alt=""> </td>
-                    <td><a href="{{ url('slider/edit/'.$slider->id) }}" class="btn btn-info">Edit</a>
-                        <a href="{{ url('slider/delete/'.$slider->id) }}" onclick="return confirm('Are you Sure to Delete?')" class="btn btn-danger">Delete</a>
+                    <td> <img src="{{ asset($testimonial->image) }}" style="height:40px; width:70px;" alt=""> </td>
+                    <td> {{ $testimonial->name }} </td>
+                    <td> {{ $testimonial->role }} </td>
+                    <td> {{ $testimonial->details }} </td>
+                    <td><a href="{{ url('testimonial/edit/'.$testimonial->id) }}" class="btn btn-info">Edit</a>
+                        <a href="{{ url('testimonial/delete/'.$testimonial->id) }}" onclick="return confirm('Are you Sure to Delete?')" class="btn btn-danger">Delete</a>
                     </td>
 
                     </tr>

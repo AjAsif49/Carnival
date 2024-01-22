@@ -1,8 +1,11 @@
 <?php
 
+use App\Models\About;
 use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Models\Product;
+use App\Models\Testimonial;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +20,12 @@ use App\Http\Controllers\ProfileController;
 
 
 Route::get('/', function () {
-    $sliders = Slider::all();   
-    
-    return view('web.pages.home', compact('sliders'));
+    $sliders        = Slider::all();   
+    $abouts         = About::all();   
+    $products       = Product::all();
+    $testimonials   = Testimonial::all();
+
+    return view('web.pages.home', compact('sliders', 'abouts', 'products', 'testimonials'));
 });
 
 Route::get('/dashboard', function () {

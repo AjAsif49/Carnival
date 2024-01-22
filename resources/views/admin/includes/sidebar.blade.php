@@ -14,7 +14,7 @@
           <img src="{{ asset('backend/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">{{ auth()->user()->name }}</a>
         </div>
       </div>
 
@@ -37,7 +37,7 @@
                with font-awesome or any other icon font library -->
           
           <li class="nav-item">
-            <a href="backend/pages/widgets.html" class="nav-link">
+            <a href="{{ route('home.about') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 About Us
@@ -46,7 +46,7 @@
           </li> 
 
           <li class="nav-item">
-            <a href="backend/pages/widgets.html" class="nav-link">
+            <a href="{{ route('home.product') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Products
@@ -63,6 +63,32 @@
             </a>
           </li> 
 
+          <li class="nav-item">
+            <a href="{{ route('home.testimonial') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+              Testimonial
+              </p>
+            </a>
+          </li> 
+
+          <li class="nav-item">
+            <a href="{{ route('home.menu') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+              Menu
+              </p>
+            </a>
+          </li> 
+
+          <li class="nav-item">
+            <a href="{{ route('home.submenu') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+              Sub Menu
+              </p>
+            </a>
+          </li> 
 
         </ul>
       </nav>
