@@ -64,6 +64,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('submenu/home', [MenuController::class, 'SubMenu'])->name('home.submenu');
     Route::get('submenu/add', [MenuController::class, 'AddSubMenu'])->name('add.submenu');
     Route::post('submenu/store', [MenuController::class, 'StoreSubMenu'])->name('store.submenu');
+    Route::get('submenu/edit/{id}', [MenuController::class, 'EditSubMenu']);
+    Route::post('submenu/update/{id}', [MenuController::class, 'UpdateSubMenu']);
+    Route::get('submenu/delete/{id}', [MenuController::class, 'DeleteSubMenu']);
 
 });
 

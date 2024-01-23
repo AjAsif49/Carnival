@@ -56,7 +56,7 @@ class MenuController extends Controller
     }
 
     public function AddSubMenu(){
-        $menus = Menu::all();
+    $menus = Menu::all();
 
         return view('admin.submenu.create', compact('menus'));
     }
@@ -70,5 +70,28 @@ class MenuController extends Controller
             'link' => $request->link,
         ]);
         return Redirect()->route('home.submenu')->with('success','Sub Menu Inserted Successfully');
+    }
+
+    public function EditSubMenu($id){
+        $menus = Menu::all();
+
+        $submenu = SubMenu::find($id);
+        return view('admin.submenu.edit', compact('submenu', 'menus'));
+    }
+
+    public function UpdateSubMenu(Request $request, $id){
+        SubMenu::find($id)->update([
+            'menu_id' => $request->menu_id,
+            'name' => $request->name,
+            'link' => $request->link,
+        ]);
+        return Redirect()->route('home.submenu')->with('success','SubMenu Updated Successfully');
+    }
+
+    public function DeleteSubMenu($id){
+        SubMenu::find($id)->delete();
+
+        return redirect()->back()->with('success', 'Sub Menu Deleted Successfully');
+
     }
 }

@@ -26,9 +26,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col" width="15%">SL No</th>
-                        <th scope="col" width="35%"> Name</th>
-                        <th scope="col" width="35%"> Link</th>
+                        <th scope="col" width="10%">SL No</th>
+                        <th scope="col" width="25%"> Name</th>
+                        <th scope="col" width="25%"> Main Menu</th>
+                        <th scope="col" width="25%"> Link</th>
                         <th scope="col" width="15%">Action</th>
                     </tr>
                 </thead>
@@ -39,6 +40,7 @@
                     <tr>       
                     <th scope="row">{{ $i++ }}</th>
                     <td> {{ $submenu->name }} </td>
+                    <td> {{ $submenu->menu->menu }} </td>
                     <td> {{ $submenu->link }} </td>
                     <td><a href="{{ url('submenu/edit/'.$submenu->id) }}" class="btn btn-info">Edit</a>
                         <a href="{{ url('submenu/delete/'.$submenu->id) }}" onclick="return confirm('Are you Sure to Delete?')" class="btn btn-danger">Delete</a>

@@ -50,19 +50,22 @@
 						<div class="menu">
 							<nav id="main-menu" class="main-menu">
 								<ul>
-									<li class="active"><a href="index.html">Home</a></li> 									
-									<li><a href="#">About Us</a></li> 														
-									<li><a href="#">Products</a>
+									@foreach ($menus as $menu)
+										
+									<li class="active"><a href="{{ url($menu->link) }}">{{ $menu->menu }}
+									</a>
+									@if(count(($menu->subMenus))>0)
 										<ul>
-											<li><a href="#">HEAT TRANSFER LABELS </a></li>
-											<li><a href="#">ALL KINDS OF GARMENTS LABEL </a></li>
-											<li><a href="#">Hang Tag</a></li>
-											<li><a href="#">OFFSET ITEMS </a></li>
-										</ul>								
-									</li>								
-									<li><a href="#">Photo Gallery</a></li> 						
-									<li><a href="#">Contact</a></li> 											
-								
+											
+											@foreach ($menu->subMenus as $submenu)
+											<li><a href="{{ $submenu->link }}">{{ $submenu->name }} </a></li>
+												
+											@endforeach
+										</ul>	
+										@endif
+									</li> 
+									
+									@endforeach 											
 									
 								</ul>
 							</nav>

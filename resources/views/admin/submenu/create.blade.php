@@ -15,6 +15,7 @@
                 <label for="exampleFormControlInput1">Menu Id</label>
 
                 <select class="form-control" id="menu_id" name="menu_id">
+                    <option value=""> Select Menu </option>
                     @foreach ($menus as $menu)
                     <option value="{{$menu->id}}">{{$menu->menu}}</option>
                     @endforeach

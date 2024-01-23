@@ -15,7 +15,7 @@ class Menu extends Model
         'link',
     ];
 
-    public function subMenu(): HasMany
+    public function subMenus(): HasMany
     {
         return $this->hasMany(SubMenu::class);
     }

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('link');
             $table->foreign('menu_id')->references('id')->on('menus')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

@@ -4,7 +4,9 @@ use App\Models\About;
 use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Models\Menu;
 use App\Models\Product;
+use App\Models\SubMenu;
 use App\Models\Testimonial;
 
 /*
@@ -24,8 +26,9 @@ Route::get('/', function () {
     $abouts         = About::all();   
     $products       = Product::all();
     $testimonials   = Testimonial::all();
+    $menus          = Menu::orderBy('id')->get();
 
-    return view('web.pages.home', compact('sliders', 'abouts', 'products', 'testimonials'));
+    return view('web.pages.home', compact('sliders', 'abouts', 'products', 'testimonials', 'menus'));
 });
 
 Route::get('/dashboard', function () {
