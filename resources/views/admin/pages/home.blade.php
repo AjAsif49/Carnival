@@ -19,7 +19,6 @@
  <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <h4>Admin List</h4>
         </div>
       </div><!-- /.container-fluid -->
     </section>

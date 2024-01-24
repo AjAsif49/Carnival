@@ -20,7 +20,7 @@
             </div>				
         </div>
         <!-- Slider Single Item End -->
-@endforeach
+        @endforeach
 
     </div>			
 </div>

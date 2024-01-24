@@ -4,6 +4,7 @@ use App\Models\About;
 use App\Models\Slider;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WebController;
 use App\Models\Menu;
 use App\Models\Product;
 use App\Models\SubMenu;
@@ -30,6 +31,13 @@ Route::get('/', function () {
 
     return view('web.pages.home', compact('sliders', 'abouts', 'products', 'testimonials', 'menus'));
 });
+
+//web pages
+Route::get('/aboutus', [WebController::class, 'AboutUs']);
+Route::get('/products', [WebController::class, 'Products']);
+Route::get('/photo-gallery', [WebController::class, 'PhotoGallery']);
+Route::get('/contact', [WebController::class, 'Contacts']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

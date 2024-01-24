@@ -1,7 +1,7 @@
 <!-- Scripts Js Start -->
-<script src="{{ asset('frontend/js/jquery-2.2.4.min.js') }}"></script>
+	<script src="{{ asset('frontend/js/jquery-2.2.4.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-	<!-- <script {{ asset('src="js/bootstrap.min.js') }}"></script> -->
+	<script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('frontend/js/isotope.pkgd.min.js') }}"></script>
 	<script src="{{ asset('frontend/js/jquery.magnific-popup.min.js') }}"></script>
 	<script src="{{ asset('frontend/js/owl.carousel.min.js') }}"></script>

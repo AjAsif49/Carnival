@@ -26,7 +26,7 @@
 						</div>					
 						<p>Are you looking for the finest quality Apparel Trims and Accessories for your brand? If yes then you are in the right place!
 
-Welcome to CARNIVAL OFFSET PRINTERS LTD. We thank you for taking your time to view our website and for showing interest in our Trims and Accessories Plant. CARNIVAL OFFSET PRINTERS Ltd. where you can find experts who really meets your demand according to your needs. We are the best manufacturer and supplier of trims & accessories and we have been in the industry since 2015.</p>
+						Welcome to CARNIVAL OFFSET PRINTERS LTD. We thank you for taking your time to view our website and for showing interest in our Trims and Accessories Plant. CARNIVAL OFFSET PRINTERS Ltd. where you can find experts who really meets your demand according to your needs. We are the best manufacturer and supplier of trims & accessories and we have been in the industry since 2015.</p>
 					<div  class="company-author">
 											
 					</div>	

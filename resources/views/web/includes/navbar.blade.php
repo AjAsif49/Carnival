@@ -37,7 +37,7 @@
 					<!-- Logo Start -->
 					<div class="col-md-3 col-sm-12 col-xs-8">
 						<div class="logo">
-							<a href="index.html" class="site-logo"><img src="frontend/img/logo.png" alt=""/></a>
+							<a href="{{ url('/') }}" class="site-logo"><img src="frontend/img/logo.png" alt=""/></a>
 							<a href="index.html" class="sticky-logo"><img src="frontend/img/logo.png" alt=""/></a>
 						</div>
 					</div>	
@@ -50,21 +50,18 @@
 						<div class="menu">
 							<nav id="main-menu" class="main-menu">
 								<ul>
+
 									@foreach ($menus as $menu)
-										
-									<li class="active"><a href="{{ url($menu->link) }}">{{ $menu->menu }}
-									</a>
-									@if(count(($menu->subMenus))>0)
-										<ul>
-											
-											@foreach ($menu->subMenus as $submenu)
-											<li><a href="{{ $submenu->link }}">{{ $submenu->name }} </a></li>
-												
-											@endforeach
-										</ul>	
+										<li class="active"><a href="{{ url($menu->link) }}">{{ $menu->menu }}
+										</a>
+										@if(count(($menu->subMenus))>0)
+											<ul>
+												@foreach ($menu->subMenus as $submenu)
+													<li><a href="{{ $submenu->link }}">{{ $submenu->name }} </a></li>		
+												@endforeach
+											</ul>	
 										@endif
-									</li> 
-									
+										</li> 
 									@endforeach 											
 									
 								</ul>
@@ -77,4 +74,4 @@
 		</div>
 		<!-- Main Bar End -->
 	</header>
-	<!-- Header End -->	
+	<!-- Header 
