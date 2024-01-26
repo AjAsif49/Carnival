@@ -57,7 +57,7 @@
 										@if(count(($menu->subMenus))>0)
 											<ul>
 												@foreach ($menu->subMenus as $submenu)
-													<li><a href="{{ $submenu->link }}">{{ $submenu->name }} </a></li>		
+													<li class="navbar-brand"><a href="{{ $submenu->link }}">{{ $submenu->name }} </a></li>		
 												@endforeach
 											</ul>	
 										@endif

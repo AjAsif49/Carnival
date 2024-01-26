@@ -14,7 +14,7 @@
 	
 	<!-- Stylesheets Start --> 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800" rel="stylesheet"> 
-	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	 {{-- <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">  --}}
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}">
 	<link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}">

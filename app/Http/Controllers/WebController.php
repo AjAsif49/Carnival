@@ -20,4 +20,14 @@ class WebController extends Controller
 
     return view('web.pages.aboutus', compact('sliders', 'abouts', 'products', 'testimonials', 'menus'));
     }
+
+    public function Products(){
+        $sliders        = Slider::all();   
+        $abouts         = About::all();   
+        $products       = Product::all();
+        $testimonials   = Testimonial::all();
+        $menus          = Menu::orderBy('id')->get();
+    
+        return view('web.pages.products', compact('sliders', 'abouts', 'products', 'testimonials', 'menus'));
+        }
 }
