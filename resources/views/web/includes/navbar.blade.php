@@ -1,5 +1,5 @@
 <!-- Header Start -->
-<header>
+<header id="header" class="fixed-top">
 		<!-- Header Topbar Start -->
 		<!-- <div class="header-top">
 			<div class="container">
@@ -31,7 +31,7 @@
 		</div> -->
 		<!-- Header Topbar End -->
 		<!-- Main Bar Start -->
-		<div class="hd-sec">
+		<div class="navbar-light navbar-dark" style="background-color: #262a2e;">
 			<div class="container">
 				<div class="row">
 					<!-- Logo Start -->

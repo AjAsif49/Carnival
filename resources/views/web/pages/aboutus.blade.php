@@ -1,13 +1,11 @@
-@include('web.includes.navbar') 
+@extends('web.layouts.main')
 <br>
+<br>
+@section('content')
 
-<br>
 @include('web.pages.home_sections.about')
 
 
+@endsection
 
-@include('web.includes.scripts')
-@include('web.includes.head')
-
-@include('web.includes.footer')
 
